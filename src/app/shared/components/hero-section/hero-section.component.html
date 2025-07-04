@@ -1,0 +1,27 @@
+<!-- SEÇÃO HERO -->
+<section class="container mx-auto px-6 py-16 md:py-24">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-green leading-tight mb-6">
+                Onde seu pet se sente em casa.
+            </h1>
+            <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
+                Bem-vindo à PetCare, um espaço criado com amor para oferecer o melhor em saúde, bem-estar e diversão para seu companheiro.
+            </p>
+            <a [routerLink]="'/servicos'" class="bg-brand-green text-white font-bold px-8 py-4 rounded-lg hover:bg-gray-800 transition-all duration-300 inline-block shadow-lg hover:shadow-xl">
+                Conheça Nossos Serviços
+            </a>
+        </div>
+        <div class="relative">
+            <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg" aria-labelledby="svgTitle" role="img">
+                <title id="svgTitle">Ilustração de uma pessoa sentada no chão com um cachorro e um gato.</title>
+                
+                <!-- Fundo sutil para dar profundidade -->
+                <circle cx="100" cy="65" r="100" fill="#D97706" opacity="0.1"></circle>
+                
+                <!-- Imagem raster dentro do SVG -->
+                <image href="/pet-care.png" x="0" y="0" width="200" height="130" alt="Imagem" />
+            </svg>
+        </div>
+    </div>
+</section>

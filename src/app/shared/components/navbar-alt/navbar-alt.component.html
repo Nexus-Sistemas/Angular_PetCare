@@ -1,0 +1,43 @@
+<header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a routerLink="/inicio" class="text-2xl font-bold text-brand-green flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-brand-accent" viewBox="0 0 20 20" fill="currentColor"><path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v2a1 1 0 01-1 1h-.22l.49 4.9a1 1 0 01-1.98.2L15 13.12V16a1 1 0 01-1 1h-1a1 1 0 01-1-1v-2.12l-1.12.88A1 1 0 019.5 15.5v-1.62l-2.5-2a1 1 0 010-1.74l2.5-2V6.5a1 1 0 01.88-1.12L11 4.5V3.5zM8.5 6a.5.5 0 00-1 0v2.5a.5.5 0 001 0V6zM6.5 7a.5.5 0 00-1 0v2.5a.5.5 0 001 0V7zM4.5 8a.5.5 0 00-1 0v2.5a.5.5 0 001 0V8z" /></svg>
+            PetCare
+        </a>
+        
+        <nav class="hidden md:flex items-center space-x-8">
+            <a routerLink="/" class="text-gray-600 hover:text-brand-accent transition-colors">Início</a>
+            <a routerLink="/diferenciais" class="text-gray-600 hover:text-brand-accent transition-colors">Diferenciais</a>
+            <a routerLink="/servicos" class="text-gray-600 hover:text-brand-accent transition-colors">Serviços</a>
+            <a routerLink="/galeria" class="text-gray-600 hover:text-brand-accent transition-colors">Galeria</a>
+        </nav>
+        <a href="#contato" class="hidden md:block bg-brand-accent text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-amber-600">
+            Agende uma Visita
+        </a>
+        
+        <div class="md:hidden">
+            <button (click)="toggleMenu()" class="text-gray-700 focus:outline-none">
+                @if (menuAberto) {
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                }
+                @if (!menuAberto) {
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                }
+            </button>
+        </div>
+    </div>
+    
+    @if (menuAberto) {
+        <div class="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200">
+            <nav class="flex flex-col items-center py-4">
+                <a routerLink="/" (click)="toggleMenu()" class="py-2 text-gray-700 hover:text-brand-accent">Início</a>
+                <a routerLink="/diferenciais" (click)="toggleMenu()" class="py-2 text-gray-700 hover:text-brand-accent">Diferenciais</a>
+                <a routerLink="/servicos" (click)="toggleMenu()" class="py-2 text-gray-700 hover:text-brand-accent">Serviços</a>
+                <a routerLink="/galeria" (click)="toggleMenu()" class="py-2 text-gray-700 hover:text-brand-accent">Galeria</a>
+                <a href="#contato" (click)="toggleMenu()" class="mt-4 bg-brand-accent text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-amber-600">
+                    Agende uma Visita
+                </a>
+            </nav>
+        </div>
+    }
+</header>

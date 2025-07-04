@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import "tailwindcss";
+
+* {
+    font-family: Inter, sans-serif;
+    scroll-behavior: smooth;
+}
+
+@theme { 
+    --font-sans: 'Inter', sans-serif;
+    --color-brand-accent: #D97706;
+    --color-brand-green: #1E4033;
+    --color-brand-light: #F3F1ED;
+}
